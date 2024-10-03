@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            
+            <table class="table   shadow-lg borderless  table-hover">
+                <div class=" d-flex justify-content-end mt-5 ">
+                    <a href="{%url 'emp-add'%}" class="btn btn-secondary">ADD</a>
+                </div>
+                <tr class="table-secondary ">
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+                    <th colspan="2" class="text-center">Edit</th>
+                    <th colspan="2" class="text-center">Detail</th>
+
+                </tr>
+                {%for emp in details %}
+                <tr>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.designation}}</td>
+                    <td>{{emp.department}}</td>
+                    <td>{{emp.salary}}</td>
+                    <td>{{emp.contact}}</td>
+                    <td>{{emp.address}}</td>
+                    <td><a href="{%url 'emp-delete' emp.id %}" class="btn btn-info">Delete</a></td>
+                    <td><a href="{%url 'emp-update' emp.id %}" class="btn btn-info">Update</a></td>
+                    <td><a href="{%url 'emp-detail' emp.id %}" class="btn btn-info">View</a></td>
+                </tr>
+                {%endfor%}
+                
+            </table>
+        </div>
+        <div class="col-2"></div>
+    </div>
+   
+</div>
+{%endblock%}

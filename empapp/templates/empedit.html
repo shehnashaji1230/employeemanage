@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+
+{%block  main_block%}
+<div class="container mt-5"></div>
+    <form action="" method="post" class="border border-2 border-dark mx-auto p-5 rounded mt-5 w-50 shadow-lg">
+        <h1 class="fw-bold text-center fs-2">Employee Update</h1>
+        {%csrf_token%}
+        {{form}}
+        <button type="submit" class="btn btn-secondary form-control mt-3">Change</button>
+    </form>
+</div>
+
+{%endblock%}

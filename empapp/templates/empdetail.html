@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block main_block%}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4 border border-3 fw-bold text-center shadow-lg bg-warning w-100 p-5">
+            <h1 class="text-center fs-2">Employee Detail</h1>
+          Name:  {{employee.name}}
+          <hr>
+          Designation: {{employee.designation}}
+          <hr>
+          Department: {{employee.department}}
+          <hr>
+          Salary: {{employee.salary}}
+          <hr>
+          Contact: {{employee.contact}}
+          <hr>
+          Address: {{employee.address}}
+          <hr>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{%endblock%}
